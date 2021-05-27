@@ -108,7 +108,7 @@ class PostLinks extends Block
     public function with()
     {
         return [
-            'links' => get_field('links'),
+            'links' => $this->links(),
         ];
     }
 
@@ -124,10 +124,14 @@ class PostLinks extends Block
         $postLinks
             ->addRepeater('links', [
                 'max' => '3',
+                'min' => '3',
             ])
                 ->addTrueFalse('true', [
                     'label' => 'Link?',
                     'default_value' => 1,
+                    'ui' => 0,
+                    'ui_on_text' => '',
+                    'ui_off_text' => '',
                 ])
                     ->setWidth('16')
                 ->addLink('link')
@@ -152,5 +156,10 @@ class PostLinks extends Block
     public function enqueue()
     {
         //
+    }
+
+    public function links()
+    {
+        return get_field('links') ?: [];
     }
 }

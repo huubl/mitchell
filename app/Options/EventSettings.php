@@ -12,21 +12,21 @@ class EventSettings extends Field
      *
      * @var string
      */
-    public $name = 'Archive Settings';
+    public $name = 'Event Page Content';
 
     /**
      * The option page menu slug.
      *
      * @var string
      */
-    public $slug = 'event-archive-settings';
+    public $slug = 'event-page-settings';
 
     /**
      * The option page document title.
      *
      * @var string
      */
-    public $title = 'Event Archive Settings';
+    public $title = 'Event Page Content';
 
     /**
      * The option page permission capability.
@@ -114,8 +114,20 @@ class EventSettings extends Field
                 'label' => 'Content'
             ])
             ->addImage('event bg', [
-                'label' => 'Background Image'
-            ]);
+                'label' => 'BG Image'
+            ])
+            ->addTaxonomy('event tax', [
+                'label' => 'Top Tags',
+                'taxonomy' => 'label',
+                'field_type' => 'multi_select',
+                'multiple' => 1,
+                'add_term' => 0,
+                'return_format' => 'object',
+            ])
+            ->addText('tag title')
+                ->setWidth('50')
+            ->addText('top tags label')
+                ->setWidth('50');
 
         return $eventSettings->build();
     }

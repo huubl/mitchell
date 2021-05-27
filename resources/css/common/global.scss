@@ -1,5 +1,5 @@
 body {
-  @apply font-antiza;
+  @apply font-atiza;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,15 +25,15 @@ figure.wp-block-embed.is-type-video iframe {
 }
 
 .nav-home {
-  @apply md:hidden lg:block;
+  @apply md:hidden lg:flex #{!important};
 }
 
 footer {
   .nav-head {
-    @apply font-bold font-whyte text-black;
+    @apply font-bold font-whyte text-black hover:text-c-blue-200;
   }
   .nav-sub {
-    @apply font-whyte text-gray-600;
+    @apply font-whyte text-c-gray-400 hover:underline;
   }
 }
 
@@ -64,4 +64,8 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+a, button {
+  @apply transition duration-200;
 }

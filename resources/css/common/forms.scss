@@ -1,7 +1,7 @@
 .gfield {
   @apply mb-4 md:flex md:items-center md:w-full;
   input, select, textarea {
-    @apply w-full bg-white focus:outline-none;
+    @apply w-full bg-white focus:outline-none border-0;
   }
   &.gfield_error {
     input, select, textarea {
@@ -44,7 +44,7 @@
   @apply hidden;
 }
 
-.footer-form {
+.footer-form, .signup-form {
   #gform_1 {
     @apply flex flex-wrap;
   }
@@ -68,7 +68,7 @@
       @apply w-full;
     }
     input {
-      @apply py-2 px-4 w-full font-whyte;
+      @apply py-3 px-4 w-full font-whyte;
     } 
   }
   .gform_confirmation_message_1 {
@@ -77,36 +77,51 @@
 }
 
 .signup-form {
-  #gform_2 {
-    @apply flex flex-wrap;
-  }
-  .validation_error {
-    @apply w-full;
-  }
-  .gform_body {
-    @apply flex-1;
-  }
   .gform_button {
-    @apply font-whyte font-bold text-black py-0 bg-c-blue-50 normal-case px-4 h-full tracking-tight;
+    @apply my-auto bg-c-blue-200 h-full w-10 px-1 py-1 transition duration-300;
     &:hover {
+      @apply bg-c-blue-300;
     }
   }
   .gform_footer {
-    @apply flex items-center bg-c-blue-50;
-  }
-  .gfield {
-    @apply mb-0;
-    .ginput_container {
-      @apply w-full;
-    }
-    input {
-      @apply py-2 px-4 w-full font-whyte;
-    } 
+    @apply flex items-center bg-c-blue-200;
   }
   .gform_confirmation_message_1 {
-    @apply text-gray-600;
+    @apply text-white;
   }
 }
+
+// .signup-form {
+//   #gform_2 {
+//     @apply flex flex-wrap;
+//   }
+//   .validation_error {
+//     @apply w-full;
+//   }
+//   .gform_body {
+//     @apply flex-1;
+//   }
+//   .gform_button {
+//     @apply font-whyte font-bold text-black py-0 bg-c-blue-50 normal-case px-4 h-full tracking-tight;
+//     &:hover {
+//     }
+//   }
+//   .gform_footer {
+//     @apply flex items-center bg-c-blue-50;
+//   }
+//   .gfield {
+//     @apply mb-0;
+//     .ginput_container {
+//       @apply w-full;
+//     }
+//     input {
+//       @apply py-3 px-4 w-full font-whyte;
+//     } 
+//   }
+//   .gform_confirmation_message_1 {
+//     @apply text-gray-600;
+//   }
+// }
 
 .contact-form {
   .validation_error {
@@ -129,5 +144,8 @@
   }
   .gform_button {
     @apply font-whyte font-bold text-white bg-transparent w-auto normal-case px-12 py-3 tracking-wide border border-white md:px-16 hover:bg-white hover:text-c-blue-300 lg:text-lg xl:text-xl;
+  }
+  .gform_confirmation_message {
+    @apply text-white;
   }
 }

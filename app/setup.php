@@ -16,6 +16,7 @@ use function Roots\asset;
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/vendor.js', asset('js/vendor.js')->uri(), ['jquery'], null, true);
     wp_enqueue_script('sage/app.js', asset('js/app.js')->uri(), ['sage/vendor.js'], null, true);
+    wp_localize_script( 'sage/app.js', 'ajax_url', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
     wp_add_inline_script('sage/vendor.js', asset('js/manifest.js')->contents(), 'before');
 
@@ -201,6 +202,8 @@ add_action('widgets_init', function () {
 });
 
 add_action('init', function() {
+    wp_deregister_script( 'autosave' );
+    
     register_taxonomy('post_tag', array());
 
     register_extended_taxonomy( 'label', ['post', 'tribe_events'], array(
@@ -208,6 +211,7 @@ add_action('init', function() {
         # Use radio buttons in the meta box for this taxonomy on the post editing screen:
         'meta_box' => 'simple',
         'hierarachical' => true,
+        'public' => false,
 
         # Show this taxonomy in the 'At a Glance' dashboard widget:
 
@@ -248,6 +252,8 @@ add_action('init', function() {
 		)
 
     ) );
+    unregister_taxonomy_for_object_type( 'tribe_events_cat', 'tribe_events' );
+    register_taxonomy_for_object_type( 'category', 'tribe_events' );
 
 
 });

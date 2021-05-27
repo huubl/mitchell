@@ -8,11 +8,13 @@
       </h1>
     </div>
 
-    <div class="px-6 py-4 text-sm bg-white border-b border-gray-100 md:flex md:justify-end md:items-center md:space-x-6 md:px-8 xl:py-6 lg:space-x-8 xl:px-12">     
+    <div class="px-6 py-4 text-sm bg-white border-b border-gray-100 md:flex md:justify-end md:items-center md:space-x-6 md:px-8 xl:py-6 lg:space-x-8 xl:px-12">
+      <?php if(isset($speaker) && $speaker): ?>     
         <p class="text-gray-600 byline author vcard font-whyte">
           <span><?php echo e(__('Speaker(s):', 'sage')); ?></span>
           <span class=""><?php echo $speaker; ?></span>
         </p>
+      <?php endif; ?>
       <time class="text-gray-600 uppercase updated font-whyte" datetime="<?php echo e(date('c', strtotime($event->EventStartDate))); ?>">
         <?php echo e(date('F j, Y', strtotime($event->EventStartDate))); ?>
 

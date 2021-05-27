@@ -4,27 +4,27 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7
+class ComposerStaticInit3fffba2e11f3f7ba1acbe375a475c119
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
-        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
+        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
-        '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
+        '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
+        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
-        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
-        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
+        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'a2c48002d05f7782d8b603bd2bcb5252' => __DIR__ . '/..' . '/johnbillion/extended-cpts/extended-cpts.php',
-        '7018e3dbeb54682c59da60bb2ff4f971' => __DIR__ . '/..' . '/roots/support/helpers.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        '7018e3dbeb54682c59da60bb2ff4f971' => __DIR__ . '/..' . '/roots/support/helpers.php',
+        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '2fb983e63247f84d8365e00e3015e40b' => __DIR__ . '/..' . '/log1x/sage-svg/src/helpers.php',
         '8f15f9ff549eb573a8fa9fc1521408d9' => __DIR__ . '/..' . '/roots/acorn/src/helpers.php',
     );
@@ -337,8 +337,8 @@ class ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
-            1 => __DIR__ . '/..' . '/illuminate/collections',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
+            1 => __DIR__ . '/..' . '/illuminate/macroable',
             2 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Session\\' => 
@@ -431,23 +431,51 @@ class ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'D' => 
+        array (
+            'Detection' => 
+            array (
+                0 => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/namespaced',
+            ),
+        ),
+    );
+
     public static $classMap = array (
+        'App\\Blocks\\About' => __DIR__ . '/../..' . '/app/Blocks/About.php',
+        'App\\Blocks\\Button' => __DIR__ . '/../..' . '/app/Blocks/Button.php',
+        'App\\Blocks\\Contact' => __DIR__ . '/../..' . '/app/Blocks/Contact.php',
+        'App\\Blocks\\Featured' => __DIR__ . '/../..' . '/app/Blocks/Featured.php',
         'App\\Blocks\\Hero' => __DIR__ . '/../..' . '/app/Blocks/Hero.php',
+        'App\\Blocks\\IssuesBlock' => __DIR__ . '/../..' . '/app/Blocks/IssuesBlock.php',
+        'App\\Blocks\\News' => __DIR__ . '/../..' . '/app/Blocks/News.php',
         'App\\Blocks\\PostLinks' => __DIR__ . '/../..' . '/app/Blocks/PostLinks.php',
+        'App\\Blocks\\Resources' => __DIR__ . '/../..' . '/app/Blocks/Resources.php',
+        'App\\Blocks\\Signup' => __DIR__ . '/../..' . '/app/Blocks/Signup.php',
         'App\\Blocks\\Speaker' => __DIR__ . '/../..' . '/app/Blocks/Speaker.php',
+        'App\\Blocks\\SplitContent' => __DIR__ . '/../..' . '/app/Blocks/SplitContent.php',
+        'App\\Blocks\\Stats' => __DIR__ . '/../..' . '/app/Blocks/Stats.php',
+        'App\\Blocks\\Twitter' => __DIR__ . '/../..' . '/app/Blocks/Twitter.php',
+        'App\\Fields\\ArchiveSettings' => __DIR__ . '/../..' . '/app/Fields/ArchiveSettings.php',
+        'App\\Fields\\Categories' => __DIR__ . '/../..' . '/app/Fields/Categories.php',
+        'App\\Fields\\ExternalLink' => __DIR__ . '/../..' . '/app/Fields/ExternalLink.php',
         'App\\Fields\\Issues' => __DIR__ . '/../..' . '/app/Fields/Issues.php',
         'App\\Fields\\Partials\\GForm' => __DIR__ . '/../..' . '/app/Fields/Partials/GForm.php',
         'App\\Fields\\Post' => __DIR__ . '/../..' . '/app/Fields/Post.php',
         'App\\Options\\EventSettings' => __DIR__ . '/../..' . '/app/Options/EventSettings.php',
+        'App\\Options\\PostSettings' => __DIR__ . '/../..' . '/app/Options/PostSettings.php',
         'App\\Options\\ThemeSettings' => __DIR__ . '/../..' . '/app/Options/ThemeSettings.php',
         'App\\Providers\\ThemeServiceProvider' => __DIR__ . '/../..' . '/app/Providers/ThemeServiceProvider.php',
         'App\\View\\Components\\Alert' => __DIR__ . '/../..' . '/app/View/Components/Alert.php',
         'App\\View\\Composers\\App' => __DIR__ . '/../..' . '/app/View/Composers/App.php',
+        'App\\View\\Composers\\Category' => __DIR__ . '/../..' . '/app/View/Composers/Category.php',
         'App\\View\\Composers\\Event' => __DIR__ . '/../..' . '/app/View/Composers/Event.php',
         'App\\View\\Composers\\EventArchive' => __DIR__ . '/../..' . '/app/View/Composers/EventArchive.php',
         'App\\View\\Composers\\Footer' => __DIR__ . '/../..' . '/app/View/Composers/Footer.php',
         'App\\View\\Composers\\Header' => __DIR__ . '/../..' . '/app/View/Composers/Header.php',
         'App\\View\\Composers\\Post' => __DIR__ . '/../..' . '/app/View/Composers/Post.php',
+        'App\\View\\Composers\\Search' => __DIR__ . '/../..' . '/app/View/Composers/Search.php',
+        'App\\View\\Composers\\TemplateContainer' => __DIR__ . '/../..' . '/app/View/Composers/TemplateContainer.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
@@ -557,6 +585,7 @@ class ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7
         'Cocur\\Slugify\\Slugify' => __DIR__ . '/..' . '/cocur/slugify/src/Slugify.php',
         'Cocur\\Slugify\\SlugifyInterface' => __DIR__ . '/..' . '/cocur/slugify/src/SlugifyInterface.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Detection\\MobileDetect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/namespaced/Detection/MobileDetect.php',
         'Doctrine\\Inflector\\CachedWordInflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector/CachedWordInflector.php',
         'Doctrine\\Inflector\\GenericLanguageInflectorFactory' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector/GenericLanguageInflectorFactory.php',
         'Doctrine\\Inflector\\Inflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector/Inflector.php',
@@ -866,14 +895,27 @@ class ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7
         'Illuminate\\Foundation\\Bus\\PendingChain' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Bus/PendingChain.php',
         'Illuminate\\Foundation\\Bus\\PendingDispatch' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Bus/PendingDispatch.php',
         'Illuminate\\Foundation\\ComposerScripts' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/ComposerScripts.php',
+        'Illuminate\\Foundation\\Console\\ClearCompiledCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/ClearCompiledCommand.php',
         'Illuminate\\Foundation\\Console\\ClosureCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/ClosureCommand.php',
+        'Illuminate\\Foundation\\Console\\ComponentMakeCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/ComponentMakeCommand.php',
+        'Illuminate\\Foundation\\Console\\ConfigCacheCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/ConfigCacheCommand.php',
+        'Illuminate\\Foundation\\Console\\ConfigClearCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/ConfigClearCommand.php',
+        'Illuminate\\Foundation\\Console\\ConsoleMakeCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/ConsoleMakeCommand.php',
+        'Illuminate\\Foundation\\Console\\EnvironmentCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/EnvironmentCommand.php',
         'Illuminate\\Foundation\\Console\\Kernel' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/Kernel.php',
-        'Illuminate\\Foundation\\Console\\QueuedCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/QueuedCommand.php',
+        'Illuminate\\Foundation\\Console\\OptimizeClearCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/OptimizeClearCommand.php',
+        'Illuminate\\Foundation\\Console\\OptimizeCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/OptimizeCommand.php',
+        'Illuminate\\Foundation\\Console\\PackageDiscoverCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/PackageDiscoverCommand.php',
+        'Illuminate\\Foundation\\Console\\ProviderMakeCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/ProviderMakeCommand.php',
+        'Illuminate\\Foundation\\Console\\VendorPublishCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/VendorPublishCommand.php',
+        'Illuminate\\Foundation\\Console\\ViewCacheCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/ViewCacheCommand.php',
+        'Illuminate\\Foundation\\Console\\ViewClearCommand' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Console/ViewClearCommand.php',
         'Illuminate\\Foundation\\EnvironmentDetector' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/EnvironmentDetector.php',
         'Illuminate\\Foundation\\Events\\LocaleUpdated' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Events/LocaleUpdated.php',
         'Illuminate\\Foundation\\Exceptions\\Handler' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Exceptions/Handler.php',
         'Illuminate\\Foundation\\Exceptions\\ReportableHandler' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Exceptions/ReportableHandler.php',
         'Illuminate\\Foundation\\Exceptions\\WhoopsHandler' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Exceptions/WhoopsHandler.php',
+        'Illuminate\\Foundation\\Inspiring' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/Inspiring.php',
         'Illuminate\\Foundation\\PackageManifest' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/PackageManifest.php',
         'Illuminate\\Foundation\\ProviderRepository' => __DIR__ . '/..' . '/roots/acorn/src/Illuminate/Foundation/ProviderRepository.php',
         'Illuminate\\Http\\Client\\ConnectionException' => __DIR__ . '/..' . '/illuminate/http/Client/ConnectionException.php',
@@ -1209,6 +1251,7 @@ class ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7
         'Masterminds\\HTML5\\Serializer\\OutputRules' => __DIR__ . '/..' . '/masterminds/html5/src/HTML5/Serializer/OutputRules.php',
         'Masterminds\\HTML5\\Serializer\\RulesInterface' => __DIR__ . '/..' . '/masterminds/html5/src/HTML5/Serializer/RulesInterface.php',
         'Masterminds\\HTML5\\Serializer\\Traverser' => __DIR__ . '/..' . '/masterminds/html5/src/HTML5/Serializer/Traverser.php',
+        'Mobile_Detect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/Mobile_Detect.php',
         'Monolog\\DateTimeImmutable' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
         'Monolog\\ErrorHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ErrorHandler.php',
         'Monolog\\Formatter\\ChromePHPFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/ChromePHPFormatter.php',
@@ -1488,6 +1531,7 @@ class ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7
         'Roots\\Acorn\\Assets\\Contracts\\Manifest' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Assets/Contracts/Manifest.php',
         'Roots\\Acorn\\Assets\\RelativePathManifest' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Assets/RelativePathManifest.php',
         'Roots\\Acorn\\Bootloader' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Bootloader.php',
+        'Roots\\Acorn\\Bootstrap\\CaptureRequest' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Bootstrap/CaptureRequest.php',
         'Roots\\Acorn\\Bootstrap\\HandleExceptions' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Bootstrap/HandleExceptions.php',
         'Roots\\Acorn\\Bootstrap\\LoadConfiguration' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Bootstrap/LoadConfiguration.php',
         'Roots\\Acorn\\Bootstrap\\RegisterConsole' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Bootstrap/RegisterConsole.php',
@@ -1496,22 +1540,13 @@ class ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7
         'Roots\\Acorn\\Bootstrap\\SageFeatures' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Bootstrap/SageFeatures.php',
         'Roots\\Acorn\\ComposerScripts' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/ComposerScripts.php',
         'Roots\\Acorn\\Config' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Config.php',
-        'Roots\\Acorn\\Console\\Commands\\Command' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/Command.php',
-        'Roots\\Acorn\\Console\\Commands\\ComponentMakeCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/ComponentMakeCommand.php',
         'Roots\\Acorn\\Console\\Commands\\ComposerMakeCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/ComposerMakeCommand.php',
         'Roots\\Acorn\\Console\\Commands\\ConfigCacheCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/ConfigCacheCommand.php',
-        'Roots\\Acorn\\Console\\Commands\\ConfigClearCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/ConfigClearCommand.php',
-        'Roots\\Acorn\\Console\\Commands\\ConsoleMakeCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/ConsoleMakeCommand.php',
         'Roots\\Acorn\\Console\\Commands\\GeneratorCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/GeneratorCommand.php',
         'Roots\\Acorn\\Console\\Commands\\OptimizeClearCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/OptimizeClearCommand.php',
         'Roots\\Acorn\\Console\\Commands\\OptimizeCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/OptimizeCommand.php',
-        'Roots\\Acorn\\Console\\Commands\\PackageClearCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/PackageClearCommand.php',
-        'Roots\\Acorn\\Console\\Commands\\PackageDiscoverCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/PackageDiscoverCommand.php',
-        'Roots\\Acorn\\Console\\Commands\\ProviderMakeCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/ProviderMakeCommand.php',
         'Roots\\Acorn\\Console\\Commands\\SummaryCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/SummaryCommand.php',
-        'Roots\\Acorn\\Console\\Commands\\VendorPublishCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/VendorPublishCommand.php',
-        'Roots\\Acorn\\Console\\Commands\\ViewCacheCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/ViewCacheCommand.php',
-        'Roots\\Acorn\\Console\\Commands\\ViewClearCommand' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Commands/ViewClearCommand.php',
+        'Roots\\Acorn\\Console\\Concerns\\GracefullyCallsCommands' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Concerns/GracefullyCallsCommands.php',
         'Roots\\Acorn\\Console\\Console' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Console.php',
         'Roots\\Acorn\\Console\\Kernel' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Console/Kernel.php',
         'Roots\\Acorn\\Exceptions\\Handler' => __DIR__ . '/..' . '/roots/acorn/src/Roots/Acorn/Exceptions/Handler.php',
@@ -2201,7 +2236,7 @@ class ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7
         'TOC\\OrderedListRenderer' => __DIR__ . '/..' . '/caseyamcl/toc/src/OrderedListRenderer.php',
         'TOC\\TocGenerator' => __DIR__ . '/..' . '/caseyamcl/toc/src/TocGenerator.php',
         'TOC\\TocTwigExtension' => __DIR__ . '/..' . '/caseyamcl/toc/src/TocTwigExtension.php',
-        'TOC\\UniqueSluggifier' => __DIR__ . '/..' . '/caseyamcl/toc/src/UniqueSluggifier.php',
+        'TOC\\UniqueSlugify' => __DIR__ . '/..' . '/caseyamcl/toc/src/UniqueSlugify.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
@@ -2228,9 +2263,10 @@ class ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit9b7189ef2d84b5622f98754f3a7f72d7::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3fffba2e11f3f7ba1acbe375a475c119::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3fffba2e11f3f7ba1acbe375a475c119::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit3fffba2e11f3f7ba1acbe375a475c119::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit3fffba2e11f3f7ba1acbe375a475c119::$classMap;
 
         }, null, ClassLoader::class);
     }

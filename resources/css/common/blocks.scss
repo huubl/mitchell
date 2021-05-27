@@ -1,6 +1,9 @@
 .post-links {
   a {
     @apply no-underline #{!important};
+    &:hover {
+      @apply shadow-issue;
+    }
   }
   a:nth-child(1) {
     @apply bg-c-blue-300 text-white;
@@ -30,6 +33,39 @@
     }
     .datepicker .month.active.focused {
       background: #6DA4F0;
+    }
+    .tribe-events-c-top-bar__today-button {
+      @apply hidden #{!important};
+    }
+    .tribe-events-c-top-bar__nav {
+      @apply absolute w-full hidden xl:flex xl:justify-between #{!important};
+      top: 50%;
+      .tribe-events-c-top-bar__nav-list {
+        @apply relative w-full flex justify-between;
+      }
+      .tribe-events-c-top-bar__nav-list-item {
+        @apply w-10 h-10 p-2 border border-c-blue-100 border-solid rounded-full;
+        &:nth-child(1) {
+          @apply absolute left-0 -ml-16 top-0 mt-96;
+        }
+        &:nth-child(2) {
+          @apply absolute right-0 -mr-16 top-0 mt-96;
+        }
+      }
+      .tribe-events-c-top-bar__nav-link {
+        
+        &.tribe-events-c-top-bar__nav-link--prev {
+          svg {
+            @apply mx-auto mt-px;
+          }
+        }
+        &.tribe-events-c-top-bar__nav-link--next {
+          @apply w-full;
+          svg {
+            @apply mx-auto mt-px;
+          }
+        }
+      }
     }
   }
   .tribe-events-calendar-month {
@@ -122,19 +158,18 @@
 
 .page-template-template-container {
   h2 {
-    @apply underline leading-loose text-3xl lg:text-4xl #{!important};
-    text-underline-offset: 0.5em;
+    @apply leading-loose text-3xl lg:text-4xl #{!important};
   }
 }
 
 .wp-block-button {
-  @apply py-4 md:py-8;
+  @apply pt-4 md:pt-8;
   .button {
-    @apply bg-c-blue-300 text-white px-12 py-3 no-underline font-whyte;
+    @apply bg-c-blue-300 text-white px-12 py-3 no-underline font-whyte border-2 border-c-blue-300;
   }
 }
 
-.posts-wrapper {
+.posts-wrapper, .posts-ajax-wrapper {
   > :nth-child(odd) .border-container {
     @apply border border-gray-200;
   }
@@ -159,4 +194,252 @@
   &:checked + div {
     @apply bg-c-blue-200;
   }
+}
+
+.feat-container {
+  .feat-item {
+    &:last-of-type {
+      @apply border-0;
+    }
+  }
+}
+
+.twitter-container {
+  #ctf {
+    .ctf-author-box {
+      @apply min-h-0;
+      .ctf-tweet-meta {
+        a.ctf-tweet-date[style] {
+          @apply text-gray-400 text-sm #{!important};
+        }
+      }
+    }
+    .ctf-tweet-content {
+      @apply lg:text-lg;
+      a {
+        @apply text-c-blue-100 hover:underline;
+      }
+    }
+    .ctf-tweet-items {
+      @apply md:mb-8;
+    }
+    #ctf-more {
+      @apply w-auto block text-center min-h-0 px-8 py-2 text-c-blue-200 hover:underline bg-transparent font-medium mx-auto;
+    }
+  }
+}
+
+.event-calendar {
+  .tribe-events {
+    .tribe-common-l-container {
+      @apply py-6 min-h-0 px-6 container lg:px-8 relative;
+    }
+  }
+}
+
+.issue-item {
+  .issue-image {
+    @apply duration-300 ease-in-out;
+    transition-property: filter, -webkit-filter, all;
+    filter:grayscale(1);
+  }
+  &:hover {
+    .issue-image {
+      @apply cursor-pointer;
+      filter: grayscale(0);
+    }
+  }
+}
+
+.contact-map {
+  img {
+    @apply duration-300 ease-in-out;
+    transition-property: filter, -webkit-filter, all;
+    filter:grayscale(1);
+  }
+  &:hover {
+    img {
+      @apply cursor-pointer;
+      filter: grayscale(0);
+    }
+  }
+}
+
+.donate {
+  .wp-block-button {
+    .button {
+      @apply hover:border-c-blue-300 hover:text-c-blue-300 hover:bg-white;
+    }
+  }
+}
+
+.consent {
+  a {
+    @apply underline hover:text-c-blue-100;
+  }
+}
+
+.about-issues {
+  .issue-grid {
+    a {
+      @apply border-0 border-none;
+    }
+  }
+}
+
+.home {
+  .wp-block-issues-block {
+    .issue-grid {
+      h4 {
+        @apply text-2xl md:text-3xl;
+      }
+    }
+  }
+  .wp-block-hero {
+    .hero-pretitle {
+    }
+    .hero-bg {
+    }
+    .hero-title {
+      @apply mb-12 md:mb-4;
+    }
+    .hero-video {
+      @apply mb-12;
+    }
+    .hero-content {
+      @apply mb-12 md:mb-6 md:leading-normal;
+    }
+  }
+}
+
+.event-calendar {
+  .calendar {
+    @apply relative font-whyte;
+  }
+  .fc-toolbar {
+    @apply bg-c-black-100 text-white flex items-center justify-between pl-3 py-3 mb-0 md:px-6 md:pr-3 md:py-4 #{!important};
+    .fc-left {
+      @apply text-lg uppercase md:text-xl md:col-span-6;
+    }
+    .fc-center, .fc-clear {
+      @apply hidden;
+    }
+    .fc-right {
+      @apply md:flex md:justify-end;
+      @screen lg {
+        top: 50%;
+      }
+      .fc-button-group {
+        @apply ml-0 block;
+        .fc-button {
+          @apply bg-transparent border-none shadow-none px-2 focus:outline-none;
+          background-image: none;
+          .fc-icon {
+            @apply text-white;
+          }
+          // &.fc-state-hover {
+          //   @apply lg:bg-c-blue-100;
+          //   .fc-icon {
+          //     @apply lg:text-white;
+          //   }
+          // }
+        }
+        // .fc-prev-button {
+        //   @apply lg:-ml-16;
+        //   .fc-icon {
+        //     @apply lg:ml-0;
+        //   }
+        // }
+        // .fc-next-button {
+        //   @apply lg:-mr-16;
+        //   .fc-icon {
+        //     @apply lg:mr-0;
+        //   }
+        // }
+      }
+    }
+    .fc-today-button {
+      @apply hidden;
+    }
+    >*>* {
+      @apply float-none #{!important};
+    }
+  }
+  .fc-view-container {
+    .fc-list-item-time {
+      @apply hidden;
+    }
+    .fc-month-view {
+      .fc-day-header {
+        @apply border-r-0 border-l-0;
+      }
+      table {
+        @apply bg-c-gray-100;
+      }
+      .fc-day-top {
+        @apply float-none pl-1 pt-1;
+        .fc-day-number {
+          @apply text-xl text-c-black-100 float-none md:text-lg #{!important};
+        }
+      }
+      .fc-day-grid-event {
+        @apply text-c-black-100 bg-transparent border-none hover:text-c-blue-150 #{!important};
+        .fc-title {
+          @apply underline;
+        }
+        .fc-time {
+          @apply hidden;
+        }
+      }
+      .fc-today {
+        @apply border bg-transparent;
+        border-color: #DDD;
+        .fc-day-number {
+          @apply text-c-blue-150 #{!important};
+        }
+      }
+      .fc-has-event {
+        @apply bg-c-blue-50 border #{!important};
+        border-color: #DDD;
+      }
+    }
+    .fc-event-container {
+      // @apply md:pl-2 xl:pl-3;
+    }
+    .fc-list-empty-wrap2 {
+      @apply block;
+      .fc-list-empty {
+        @apply py-4;
+      }
+    }
+    .fc-basic-view {
+      .fc-body {
+        .fc-row {
+          min-height: 3rem;
+        }
+      }
+    }
+  }
+
+
+}
+
+.hero-gradient {
+  background: linear-gradient(180.37deg, #041429 0.32%, rgba(19, 42, 70, 0) 34.66%), rgba(7, 32, 45, 0.35);
+}
+
+.search {
+  #app {
+    @apply min-h-screen;
+  }
+}
+
+.tribe-events-page-template {
+  .cal-event-dot {
+    @apply hidden sm:block h-3 w-3 lg:h-2 lg:w-2 bg-c-blue-150 rounded-full mb-1 ml-4 hover:opacity-25;
+  }
+  .cal-event-title {
+    @apply sm:hidden;
+  }
+
 }

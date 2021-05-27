@@ -1,7 +1,7 @@
 <div class="">
   <div class="relative z-10">
     <div class="relative z-10 h-40 bg-center bg-cover bg-c-gray-200 md:h-72 lg:h-96 xl:h-108" style="background-image: url('{!! $bg !!}')"></div>
-    <div class="absolute inset-0 z-20 w-full h-full bg-black opacity-30"></div>
+    <div class="absolute inset-0 z-20 w-full h-full bg-black opacity-40"></div>
   </div>
   <article @php(post_class('relative md:max-w-2xl md:mx-auto md:shadow-article md:-mt-24 z-30 md:mb-16 lg:max-w-4xl lg:-mt-40 xl:max-w-6xl lg:mb-20 xl:mb-24 xl:-mt-48'))>
     <header>
@@ -12,7 +12,7 @@
       </div>
 
       <div class="px-6 py-4 text-sm bg-white border-b border-gray-100 md:flex md:justify-end md:items-center md:space-x-6 md:px-8 xl:py-6 lg:space-x-8 xl:px-12">
-        @if($show_author)      
+        @if(get_the_author() !== 'admin')      
           <p class="text-gray-600 byline author vcard font-whyte">
             <span>{{ __('Author:', 'sage') }}</span>
             <span class="uppercase">{{ get_the_author() }}</span>
